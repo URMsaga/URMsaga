@@ -25,7 +25,7 @@ public class DemoRestController {
 		almond.setName("Almond");
 		productRepo.put(almond.getId(), almond);
 	}
-
+//record will be deleted based on the product id
 	@RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Object> delete(@PathVariable("id") String id) {
 		productRepo.remove(id);
